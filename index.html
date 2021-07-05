@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Text based RPG</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+    </head>
+    <body>
+        <!--Main game container-->
+        <div class="container">
+            <header>
+                <div class="height100"> <!--Hero Stats-->
+                    <img class="status-bar-player" src="images/hpmana.png">
+                </div>
+                <div class="height100"> <!--Hero Avatar-->
+                    
+                    <div class="container-avatar">
+                        <img class="animated-sprite" src="images/avatar.png">
+                    </div>
+                </div>
+                <div class="height100"> <!--Enemy/Target Avatar-->
+                    
+                    <div class="container-avatar">
+                        <img class="animated-sprite" src="images/enemy1.png">
+                    </div>
+                </div>
+                <div class="height100"> <!--Enemy Stats-->
+                    <img class="status-bar-enemy" src="images/hpmana.png">
+                </div>
+                
+            </header>
+
+            <main>
+                <p class="8bit">You attack the tree for 2HP. You died. You then resurrected and immediatelly died again, because you're a fruitcake.</p>
+
+                <p>This is just a placeholder. This is just a placeholder. This is just a placeholder. This is just a placeholder. This is just a placeholder.</p>
+                <p>This is just a placeholder. This is just a placeholder. This is just a placeholder. This is just a placeholder. This is just a placeholder.</p>
+                <blockquote>
+                    Ablahblahsl
+                </blockquote>
+            </main>
+
+            <footer>
+                <!--Inventory-->
+                <div class="tile">
+                    <p>1x Wooden Sword</p>
+                    <p>1x Silver Key [Blacksmith House]</p>
+                    <p>999x Trash</p>
+                    <p>999x Trash</p>
+                    <p>999x Trash</p>
+                    <p>999x Trash</p>
+                    <p>999x Trash</p>
+                    <p>999x Trash</p>
+                    <p>999x Trash</p>
+                    <p>999x Trash</p>
+                    <p>999x Trash</p>
+                </div>
+                <!--Actions Bar - This will be populated by JAVASCRIPT depending on the current map and contents of player inventory-->
+                <div class="tile">
+                    <input type="button" value="Attack">
+                    <input type="button" value="Eat an Apple">
+                    <input type="button" value="Run">
+                    <input type="button" value="Attack">
+                    <input type="button" value="Attack">
+                    <input type="button" value="Attack">
+                    <input type="button" value="Attack">
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
