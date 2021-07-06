@@ -74,6 +74,7 @@ footer
     height: 100%;
     width: 25rem;
     margin: 0.5rem;
+    overflow: hidden;
 }
 .tile
 {
@@ -92,6 +93,7 @@ footer
 {
     width: calc(32px * var(--pixel-size));
     height: calc(32px * var(--pixel-size));
+    display: block;
     overflow: hidden;
     /*background: red;*/
     margin: auto;
@@ -103,6 +105,7 @@ footer
     animation: move-sprites 1s steps(4) infinite;
     width: calc(128px * var(--pixel-size));
     position: absolute;
+    overflow: hidden;
 }
 
 .status-bar-player
