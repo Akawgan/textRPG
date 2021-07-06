@@ -150,6 +150,7 @@ footer
     }
     header
     {
+        min-height: 50px;
         display: flex;
         background-color: rgba(255, 255, 255, 0.267);
         background-image: url("images/grass_patch.png");
