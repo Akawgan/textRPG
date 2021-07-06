@@ -44,7 +44,19 @@ main
     height: 35vh;
     padding: 2em;
     overflow: auto;
+    display: flex;
+    flex-direction: column-reverse;
 }
+main p:first-child 
+{
+    color: #000000;
+}
+main p:not(:first-child)
+{
+    color: #909090;
+}
+
+/*.container > div > div:last-child*/
 footer
 {
     font-family: '8bit', Times, serif;
@@ -75,7 +87,6 @@ footer
     height: 100%;
     width: 25rem;
     margin: 0.5rem;
-    overflow: hidden;
 }
 .tile
 {
@@ -106,7 +117,6 @@ footer
     animation: move-sprites 1s steps(4) infinite;
     width: calc(128px * var(--pixel-size));
     position: absolute;
-    overflow: hidden;
 }
 
 .status-bar-player
@@ -140,6 +150,7 @@ footer
         transform: translate3d(-100%, 0, 0)
     }
 }
+
 
 /* Media queries - mobile */
 @media only screen and (hover: none) and (pointer: coarse)
