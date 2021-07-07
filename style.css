@@ -7,12 +7,7 @@
     font-family: '8bit'; /*a name to be used later*/
     src: url('fonts/8bitlim.ttf'); /*URL to font*/
 }
-img
-{
-    image-rendering: auto;
-    image-rendering: crisp-edges;
-    image-rendering: pixelated;
-}
+
 body
 {
     background-color: rgb(175, 175, 175);
@@ -83,7 +78,6 @@ footer
 .height100
 {
     flex-grow: 1;
-    border: 1px solid rgb(219, 219, 219);
     height: 100%;
     width: 25rem;
     margin: 0.5rem;
@@ -96,7 +90,14 @@ footer
     width: 25rem;
     margin: 0.5rem;
     overflow: auto;
-    padding: 0.5rem;
+    padding: 0.1rem 0.5rem 0.5rem 0.5rem;
+}
+.title
+{
+    margin: 0 auto 1em auto;
+    text-decoration: underline;
+    text-align: center;
+    font-size: small;
 }
 
 /* IDs */
