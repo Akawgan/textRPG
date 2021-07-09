@@ -33,15 +33,11 @@
 
             <main>
                 <p>Newest Line. Should appear solid, while previous lines get grayed out, but still readable. Adding a new P from JS should render the new entry as solid, and gray out the previous.</p>
-                <p class="8bit">This is just a placeholder. This is just a placeholder. This is just a placeholder. This is just a placeholder. This is just a placeholder.
-                    This is just a placeholder. This is just a placeholder. This is just a placeholder. This is just a placeholder. This is just a placeholder.
-                    This is just a placeholder. This is just a placeholder. This is just a placeholder. This is just a placeholder. This is just a placeholder.
-                    This is just a placeholder. This is just a placeholder. This is just a placeholder. This is just a placeholder. This is just a placeholder.
-                    This is just a placeholder. This is just a placeholder. This is just a placeholder. This is just a placeholder. This is just a placeholder.
-                    This is just a placeholder. This is just a placeholder. This is just a placeholder. This is just a placeholder. This is just a placeholder.
-                    This is just a placeholder. This is just a placeholder. This is just a placeholder. This is just a placeholder. This is just a placeholder.
-                    This is just a placeholder. This is just a placeholder. This is just a placeholder. This is just a placeholder. This is just a placeholder.
-                </p>
+                
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus suscipit libero, vitae vestibulum tortor interdum vitae. Aliquam erat volutpat. Nullam mattis, sapien eu vestibulum sollicitudin, urna magna vehicula tellus, sit amet dictum enim lacus id turpis. Nam et cursus ante. Donec non dapibus nulla. Morbi pulvinar ante quis odio maximus tincidunt. Aenean vitae fringilla eros, et dignissim tellus.</p>
+                <p>Pellentesque id purus molestie, commodo leo sit amet, aliquam orci. Duis ut rhoncus sem. Donec posuere auctor sapien, ut euismod neque sagittis at. In sagittis pulvinar urna et maximus. Nunc quam diam, feugiat faucibus consequat placerat, facilisis eu neque. Ut ac luctus risus, sit amet pulvinar massa. Morbi sit amet libero ac augue laoreet gravida non ut eros. Sed rutrum egestas vestibulum. Donec at condimentum lacus. Sed molestie bibendum tortor eu mollis. Donec quis odio nec nisl cursus scelerisque in sodales lacus. Morbi tempor commodo nisi. Vestibulum ut metus condimentum, scelerisque leo eget, accumsan tellus.</p>
+                <p>Morbi a ornare nisi. Sed lobortis urna ut sem porttitor, vitae varius dolor laoreet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras congue metus eu eleifend pharetra. Ut finibus arcu vitae velit porta tristique. Curabitur sodales vulputate diam, et fringilla sem euismod id. Duis vel gravida sapien. Aliquam sagittis lacus in ex porta tincidunt. Donec a ligula justo. Sed ac elementum ipsum.</p>
+                
                 <p>Oldest line. After N paragraphs start removing the oldest ones to prevent crazy amount of text? How much can a generic mobile handle?</p>
             </main>
 
@@ -54,7 +50,7 @@
                 </div>
             </div>
 
-            <footer>
+            <footer> <!-- Game menu - controlled by the JS game loop -->
                 <!--Inventory-->
                 <div class="tile">
                     <p>💼 Generic Item</p>
@@ -69,7 +65,7 @@
                     <p>💼 Generic Item</p>
                     <p>💼 Generic Item</p>
                 </div>
-                <!--Actions Bar - This will be populated by JAVASCRIPT depending on the current map and contents of player inventory-->
+                <!--Actions Bar -->
                 <div class="tile">
                     <input type="button" value="Attack ...">
                     <input type="button" value="Look Around">
