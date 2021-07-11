@@ -16,7 +16,7 @@
                 <div class="height100"> <!--Hero Avatar-->
                     
                     <div class="container-avatar">
-                        <img class="animated-sprite" src="images/avatar.png">
+                        <img id="avatar-hero" class="animated-sprite" src="images/avatar.png">
                     </div>
                 </div>
                 <div class="height100"> <!--Enemy/Target Avatar-->
@@ -59,12 +59,13 @@
                 </div>
                 <!--Actions Bar -->
                 <div class="tile">
-                    <input type="button" value="Talk to...">
-                    <input type="button" value="Look Around">
+                    <input type="button" value="Talk to ->" onclick="talkTo()">
                     <input type="button" value="Run">
-                    <input type="button" value="Use ...">
+                    <input type="button" value="Use ->">
                 </div>
             </footer>
         </div>
+
+        <script type="text/javascript" src="main.js"></script>
     </body>
 </html>
