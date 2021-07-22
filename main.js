@@ -1,6 +1,7 @@
 //JAC
 function talkTo() {
     var element = document.getElementById("avatar-hero");
+    navigator.vibrate(200);
 
     if(!element.classList.contains("stance-fight"))
     {
@@ -10,10 +11,4 @@ function talkTo() {
     {
         element.classList.remove("stance-fight");
     }
-
-
-
-
-    
-    
 }
