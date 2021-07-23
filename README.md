@@ -2,6 +2,8 @@
 
 My take on a common learning exercise - a simple, text based RPG.
 
+Live page: https://akawgan.github.io/textRPG/
+
 **Practice focus:** Basics of HTML5 / CSS3 / JavaScript / RWD
 
 ## Roadmap
