@@ -3,6 +3,14 @@
     --pixel-size: 4.5;
 }
 
+*
+{
+    touch-action: pan-y;
+    overscroll-behavior: none;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+
+
 @font-face {
     font-family: '8bit'; /*a name to be used later*/
     src: url('fonts/8bitlim.ttf'); /*URL to font*/
@@ -80,15 +88,12 @@ input[type=button], input[type=submit], input[type=reset]
         border: 1px solid #bbbbbb;
 }
 
-.menu-labels
+.nonSelectable /*Disables annoying missclicks that make you select text instead of clicking a control*/
 {
-    font-family: '8bit', Times, serif;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: rgb(255, 255, 255);
-    height: 1vh;
-    padding: 1em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .container
 {
@@ -112,33 +117,54 @@ input[type=button], input[type=submit], input[type=reset]
 }
 .inventoryWindow
 {
+    /*visibility: hidden;*/
     flex-grow: 1;
     border: 1px solid rgb(230, 230, 230);
-    border-radius: 5%;
+    border-radius: 5px;
     height: 90%;
     width: 25rem;
-    margin: 0 0.5rem 0 0.5rem;
+    margin: 1rem 0.2rem 0 0.2rem;
     overflow: auto;
     padding: 0.3rem 0.3rem 0.3rem 0.3rem;
     background-color: #f0f0f0;
+    
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
+.inventoryWindow::-webkit-scrollbar {
+    display: none;
+}
+
 .actionsWindow
 {
     flex-grow: 1;
     border: 1px solid rgb(230, 230, 230);
-    border-radius: 5%;
+    border-radius: 5px;
     height: 90%;
     width: 25rem;
-    margin: 0 0.5rem 0 0.5rem;
+    margin: 1rem 0.2rem 0 0.2rem;
     overflow: auto;
     padding: 0.3rem 0.3rem 0.3rem 0.3rem;
-    
+
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
-.tile-labels
+.actionsWindow::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+.menuLabel
 {
-    flex-grow: 1;
-    padding: 0.3rem 0.3rem 0.3rem 0.3rem;
-    
+    display: block;
+    text-align: center;
+    transform: translate(0.5em, -1.2em);
+    background-color: rgb(255, 255, 255);
+    position:absolute;
+    padding: 0 5px 0 5px;
+    border-radius: 5px;
+    border: 1px solid #bbbbbb;
 }
 .title
 {
@@ -243,7 +269,7 @@ input[type=button], input[type=submit], input[type=reset]
         flex-direction: row;
         justify-content: space-between;
         background-color: rgb(255, 255, 255);
-        height: 25vh;
+        height: 30vh;
         padding: 0em 1em 1em 1em;
     }
     input[type=button], input[type=submit], input[type=reset]

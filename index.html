@@ -52,28 +52,26 @@
                 <p>Oldest line.</p>
             </main>
 
-            <div class="menu-labels">
-                <div class="tile-labels">
-                    <p class="title">INVENTORY</p>
-                </div>
-                <div class="tile-labels">
-                    <p class="title">ACTIONS</p>
-                </div>
-            </div>
-
             <footer> <!-- Game menu - controlled by the JS game loop -->
+
                 <!--Inventory-->
                 <div class="inventoryWindow">
-                    <p class="itemTile">💼 Generic Item 1</p>
-                    <p class="itemTile">💼 Generic Item 123456789</p>
-                    <p class="itemTile">💼 Item</p>
-                    <p class="itemTile">💼 Items 1231231231 2312312 123123123 123123 1231231 23123 123123</p>
+                    <label class="menuLabel nonSelectable">Inventory</label>
+                    <p class="itemTile nonSelectable">💼 Generic Item 1</p>
+                    <p class="itemTile nonSelectable">💼 Generic Item 123456789</p>
+                    <p class="itemTile nonSelectable">💼 Item</p>
+                    <p class="itemTile nonSelectable">💼 Items 1231231231 2312312 123123123 123123 1231231 23123 123123</p>
                 </div>
-                <!--Actions Bar -->
+
                 <div class="actionsWindow">
+                    <label class="menuLabel nonSelectable">Action Menu</label>
                     <input type="button" value="Interact with" onclick="talkTo()">
                     <input type="button" value="Run">
                     <input type="button" value="Use item">
+                    <input type="button" value="Scrolling Test">
+                    <input type="button" value="Scrolling Test">
+                    <input type="button" value="Scrolling Test">
+                    <input type="button" value="Scrolling Test">
                     <input type="button" value="Scrolling Test">
                     <input type="button" value="Scrolling Test">
                 </div>
