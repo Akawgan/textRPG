@@ -48,7 +48,7 @@ main
     padding: 2em;
     overflow: auto;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
 }
 main p:first-child 
 {
