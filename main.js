@@ -11,4 +11,15 @@ function talkTo() {
     {
         element.classList.remove("stance-fight");
     }
+    // Scroll the main window down
+    var mainStoryArea = document.getElementById("mainArea");
+
+    var node = document.createElement("P");
+    var textnode = document.createTextNode("Newest Line now!");
+    node.appendChild(textnode);
+    mainStoryArea.appendChild(node);
+
+    mainStoryArea.add
+    mainStoryArea.scrollTop = mainStoryArea.scrollHeight;
 }
+

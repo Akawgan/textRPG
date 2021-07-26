@@ -50,11 +50,11 @@ main
     display: flex;
     flex-direction: column;
 }
-main p:first-child 
+main p:last-child 
 {
     color: #202020;
 }
-main p:not(:first-child)
+main p:not(:last-child)
 {
     color: #adadad;
 }
