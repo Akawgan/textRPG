@@ -5,6 +5,10 @@ data = [
     },
     {
         "mapID": "2",
-        "mapText": "Now you're in the room number two. It doesn't have any walls!"
+        "mapText": "Now you're in the room number two. It doesn't have any walls! No [[ceiling]] either!"
+    },
+    {
+        "mapID": "3",
+        "mapText": "A third map!"
     }
 ];
