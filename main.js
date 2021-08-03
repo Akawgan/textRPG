@@ -1,21 +1,26 @@
 var currentMap = 0;
+var isLogicPaused = false;
 
-//JAC
+//On press [Interact With]
 function talkTo() {
+    if(isLogicPaused) return;
+
     var element = document.getElementById("avatar-hero");
     navigator.vibrate(200);
 
-    if(!element.classList.contains("stance-fight"))
-    {
-        currentMap = 0;
-        element.classList.add("stance-fight");
-    }
-    else
-    {
-        currentMap = 1;
-        element.classList.remove("stance-fight");
-        data[0].mapText = "This is now a new description of first room! It should reset on page refresh."
-    }
+    // Reset animation frames
+    element.style.animation = 'none';
+    element.offsetHeight; /* trigger reflow */
+    element.style.animation = null; 
+    // "play" a slash animation [by adding a class to the hero avatar]
+    element.classList.add("stance-fight");
+
+        
+        
+
+    // Pause logic for 1s, after that unpause logic and finish current animation
+    isLogicPaused = true;
+    setTimeout(() => {  element.classList.remove("stance-fight"); isLogicPaused = false; }, 1000);
 
     // Test loading map text from JS
     var mapDescription = data[currentMap].mapText;
@@ -30,5 +35,8 @@ function talkTo() {
 
     mainStoryArea.add
     mainStoryArea.scrollTop = mainStoryArea.scrollHeight;
+
+    // Change map
+    currentMap = 1;
 }
 
