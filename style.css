@@ -131,8 +131,8 @@ input[type=button]:active
     margin: 1rem 0.2rem 0 0.2rem;
     overflow: auto;
     padding: 0.3rem 0.3rem 0.3rem 0.3rem;
-    background-color: #ebebeb;
-    border: 1px solid #ebebeb;
+    background-color: #f3f3f3;
+    border: 1px solid #f3f3f3;
     
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
@@ -183,8 +183,8 @@ input[type=button]:active
 .itemTile
 {
     border-radius: 3px;
-    margin: 0.2em -1em 0.2em -1em;
-    padding: 0.2em 1em 0.2em 1em;
+    margin: 3px -1em 3px -1em;
+    padding: 0.02em 1em 0.02em 1em;
     font-size:medium;
     background-color: #ffffff;
 }
