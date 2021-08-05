@@ -180,6 +180,15 @@ input[type=button]:active
     font-size: small;
     transform: translateY(1.5em)
 }
+.itemIcon
+{
+    
+    border-radius: 3px;
+    margin: 3px -1em 3px -1em;
+    padding: 0.02em 1em 0.02em 1em;
+    font-size:medium;
+    background-color: #ffffff;
+}
 .itemTile
 {
     border-radius: 3px;
