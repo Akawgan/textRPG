@@ -37,7 +37,7 @@ function playAnimation(anim, target)
 
     // Pause logic for 1s, after that unpause logic and finish current animation
     isLogicPaused = true;
-    setTimeout(() => {  element.classList.remove("stance-fight"); isLogicPaused = false; }, 1000);
+    setTimeout(() => {  element.classList.remove("stance-fight"); isLogicPaused = false; }, 990);
 }
 
 
