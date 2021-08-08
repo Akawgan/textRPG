@@ -33,11 +33,11 @@ function playAnimation(anim, target)
     element.style.animation = null; 
 
     // "play" a slash animation [by adding a class to the hero avatar]
-    element.classList.add("anim-run");
+    element.classList.add(anim);
 
     // Pause logic for 1s, after that unpause logic and finish current animation
     isLogicPaused = true;
-    setTimeout(() => {  element.classList.remove("anim-run"); isLogicPaused = false; }, 990);
+    setTimeout(() => {  element.classList.remove(anim); isLogicPaused = false; }, 990);
 }
 
 
@@ -61,6 +61,44 @@ function talkTo() // Test Button
     var textnode = document.createTextNode(mapDescription + " " + player.name);
     node.appendChild(textnode);
     mainStoryArea.appendChild(node);
+
+    scrollStoryArea();
+}
+
+// BUTTONS
+function btnAttack() // Test Button
+{
+    if(isLogicPaused) return;
+
+    navigator.vibrate(200);
+    playAnimation("anim-attack");
+
+    scrollStoryArea();
+}
+function btnRun() // Test Button
+{
+    if(isLogicPaused) return;
+
+    navigator.vibrate(200);
+    playAnimation("anim-run");
+
+    scrollStoryArea();
+}
+function btnChest() // Test Button
+{
+    if(isLogicPaused) return;
+
+    navigator.vibrate(200);
+    playAnimation("anim-chest");
+
+    scrollStoryArea();
+}
+function btnLook() // Test Button
+{
+    if(isLogicPaused) return;
+
+    navigator.vibrate(200);
+    playAnimation("anim-look");
 
     scrollStoryArea();
 }

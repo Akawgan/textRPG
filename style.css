@@ -237,7 +237,7 @@ input[type=button]:active
 {
     top: calc(-32px * var(--pixel-size));
 }
-.anim-slash
+.anim-attack
 {
     transform: translate3d(0px, 0, 0);
     top: calc(-64px * var(--pixel-size));
@@ -246,6 +246,16 @@ input[type=button]:active
 {
     transform: translate3d(0px, 0, 0);
     top: calc(-96px * var(--pixel-size));
+}
+.anim-chest
+{
+    transform: translate3d(0px, 0, 0);
+    top: calc(-128px * var(--pixel-size));
+}
+.anim-look
+{
+    transform: translate3d(0px, 0, 0);
+    top: calc(-160px * var(--pixel-size));
 }
 
 /* Animation: move keyframes left by 32px at a time, continuously */
