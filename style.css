@@ -235,12 +235,17 @@ input[type=button]:active
 /* Classes for stance animations */
 .stance-fight
 {
-    top: calc(-64px * var(--pixel-size));
+    top: calc(-32px * var(--pixel-size));
 }
 .anim-slash
 {
     transform: translate3d(0px, 0, 0);
-    top: calc(-32px * var(--pixel-size));
+    top: calc(-64px * var(--pixel-size));
+}
+.anim-run
+{
+    transform: translate3d(0px, 0, 0);
+    top: calc(-96px * var(--pixel-size));
 }
 
 /* Animation: move keyframes left by 32px at a time, continuously */

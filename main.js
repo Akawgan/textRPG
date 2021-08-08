@@ -33,11 +33,11 @@ function playAnimation(anim, target)
     element.style.animation = null; 
 
     // "play" a slash animation [by adding a class to the hero avatar]
-    element.classList.add("stance-fight");
+    element.classList.add("anim-run");
 
     // Pause logic for 1s, after that unpause logic and finish current animation
     isLogicPaused = true;
-    setTimeout(() => {  element.classList.remove("stance-fight"); isLogicPaused = false; }, 990);
+    setTimeout(() => {  element.classList.remove("anim-run"); isLogicPaused = false; }, 990);
 }
 
 
