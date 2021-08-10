@@ -97,6 +97,8 @@ function btnLook() // Test Button
 {
     if(isLogicPaused) return;
 
+    // Read map description from a JSON
+
     navigator.vibrate(200);
     playAnimation("anim-look");
 
