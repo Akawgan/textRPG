@@ -1,4 +1,6 @@
 {
     "mapID": "1",
-    "description": "This is a map description stored in the current maps JSON file, and loaded into the main story window."
+    "description": "This is a map description stored in the current maps JSON file, and loaded into the main story window.",
+
+    "contents": ["Interactable1", "Interactable2", "Interactable3"]
 }

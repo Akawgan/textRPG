@@ -70,6 +70,13 @@ function initializeMap(loadedObject)
 {
     currentMap = loadedObject;
     displayText(currentMap.description + "<br><br>" + "You're on map number <span style='color:red'>" + currentMap.mapID + "</span>");
+
+    
+    for(i=0;i<currentMap.contents.length;i++)
+    {
+        displayText("<span style='color:green'>" + currentMap.contents[i] + "</span>");
+    }
+
     console.log(currentMap);
 }
 
