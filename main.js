@@ -52,14 +52,14 @@ function displayText(string) // DISPLAYS A NEW TEXT ENTRY IN THE MAIN STORY WIND
     scrollStoryArea();
 }
 
-function loadJSON(callback) {   // COPYPASTE STUFF, TRY IF IT WORKS THEN DISSECT.
+function loadJSON(filename, callback) {   // COPYPASTE STUFF, TRY IF IT WORKS THEN DISSECT.
 
+    var file = filename + ".json";
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
-    xobj.open('GET', 'map1.json', true); // Replace 'my_data' with the path to your file
+    xobj.open('GET', "map1.json", true);
     xobj.onreadystatechange = function () {
           if (xobj.readyState == 4 && xobj.status == "200") {
-            // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
             callback(xobj.responseText);
           }
     };
@@ -74,8 +74,11 @@ function initializeMap(loadedObject)
     
     for(i=0;i<currentMap.contents.length;i++)
     {
-        displayText("<span style='color:green'>" + currentMap.contents[i] + "</span>");
+        var node = "<span style='color:green'>" + currentMap.contents[i] + "</span> ";
+        displayText(node);
     }
+
+    
 
     console.log(currentMap);
 }
@@ -93,7 +96,7 @@ function btnInitializeMap() // Map loading test. This will run when the player c
     navigator.vibrate(200);
     playAnimation("anim-run");
 
-    loadJSON(function(response) {
+    loadJSON("map1", function(response) {
           var loadedObject = JSON.parse(response); // Parse JSON string into object
           initializeMap(loadedObject); // Initialize the map object using the newly loaded data
     });
