@@ -78,8 +78,6 @@ function initializeMap(loadedObject)
         displayText(node);
     }
 
-    
-
     console.log(currentMap);
 }
 
@@ -96,7 +94,9 @@ function btnInitializeMap() // Map loading test. This will run when the player c
     navigator.vibrate(200);
     playAnimation("anim-run");
 
-    loadJSON("map1", function(response) {
+    var targetMapID = 1;
+    var file = "map" + targetMapID;
+    loadJSON(file, function(response) {
           var loadedObject = JSON.parse(response); // Parse JSON string into object
           initializeMap(loadedObject); // Initialize the map object using the newly loaded data
     });
