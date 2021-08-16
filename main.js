@@ -69,14 +69,20 @@ function loadJSON(filename, callback) {   // COPYPASTE STUFF, TRY IF IT WORKS TH
 function initializeMap(loadedObject)
 {
     currentMap = loadedObject;
-    displayText(currentMap.description + "<br><br>" + "You're on map number <span style='color:red'>" + currentMap.mapID + "</span>");
+    let interactables = "";
+
+    for(i=0;i<currentMap.contents.length;i++)
+    {
+        if(i>0) interactables += ", "
+
+        var node = "<span style='color:green'>" + currentMap.contents[i] + "</span>";
+        interactables += node;
+    }
+
+    displayText(currentMap.description + "<br><br>Interactables: " + interactables + "<hr>" + "<br><br>" + "You're on map number <span style='color:red'>" + currentMap.mapID + "</span>");
 
     
-    /*for(i=0;i<currentMap.contents.length;i++)
-    {
-        var node = "<span style='color:green'>" + currentMap.contents[i] + "</span> ";
-        displayText(node);
-    }*/
+    
 
     console.log(currentMap);
 }
