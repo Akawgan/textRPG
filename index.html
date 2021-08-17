@@ -39,25 +39,16 @@
             <footer> <!-- Game menu - controlled by the JS game loop -->
 
                 <!--Inventory-->
-                <div class="inventoryWindow">
+                <div id="inventoryWindow" class="inventoryWindow">
                     <label class="menuLabel nonSelectable">Inventory</label>
-                    <p class="itemTile nonSelectable">⚔️ Sword</p>
-                    <p class="itemTile nonSelectable">🔑 A key</p>
-                    <p class="itemTile nonSelectable">🧪 Potion of Something</p>
-                    <p class="itemTile nonSelectable">💼 Rawhide</p>
-                    <p class="itemTile nonSelectable">💼 Rawhide</p>
-                    <p class="itemTile nonSelectable">💼 Rawhide</p>
-                    <p class="itemTile nonSelectable">💼 Rawhide</p>
-                    <p class="itemTile nonSelectable">💼 Rawhide</p>
-                    <p class="itemTile nonSelectable">💼 Rawhide</p>
                 </div>
 
-                <div class="actionsWindow">
+                <div id="actionsWindow" class="actionsWindow">
                     <label class="menuLabel nonSelectable">Action Menu</label>
-                    <input type="button" value="Load Room Data" onclick="btnInitializeMap()">
-                    <input type="button" value="Look Around" onclick="btnLook()">
-                    <input type="button" value="Attack" onclick="btnAttack()">
-                    <input type="button" value="Move" onclick="btnRun()">
+                    <input type="button" value="[DBG] Load Room" onclick="btnInitializeMap()">
+                    <input type="button" value="Look At ➤" onclick="btnLook()">
+                    <input type="button" value="Attack ➤" onclick="btnAttack()">
+                    <input type="button" value="Interact ➤" onclick="btnRun()">
                     <input type="button" value="Open Chest" onclick="btnChest()">
                     
 

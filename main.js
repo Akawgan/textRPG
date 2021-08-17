@@ -1,13 +1,17 @@
 var isLogicPaused = false;
 var currentMap;
 
+// ITEMS
+const ITEM_SWORD = 1;
+const ITEM_KEY0001 = 2;
+
 const player =
 {
     name: "DummyName",
     health: 100,
     maxHealth: 100,
     currentMap: 1,
-    inventory: []
+    inventory: [ITEM_SWORD, ITEM_KEY0001, ITEM_KEY0001, ITEM_SWORD]
 };
 
 const currentLocation =
@@ -22,6 +26,41 @@ function scrollStoryArea()
 
     
     mainStoryArea.scrollTop = mainStoryArea.scrollHeight;
+}
+
+// INITIALIZE THE GAME
+window.onload = function(e){ 
+    generateInventoryWindow();
+}
+
+// ADD ITEM
+function addItem(ID)
+{
+    player.inventory.push(ID); // Add item ID to player inventory
+
+    let inventoryWindow = document.getElementById("inventoryWindow");
+
+    let node = document.createElement("P");
+    node.classList.add("itemTile")
+    node.classList.add("nonSelectable")
+
+    // Check which item we're adding, and add the correct label text
+    if (ID == ITEM_SWORD) node.innerHTML = "⚔️ Sword";
+    else if (ID == ITEM_KEY0001) node.innerHTML = "🔑 A key";
+
+    inventoryWindow.appendChild(node);
+    node = null;
+
+}
+
+// GENERATE ITEM WINDOW
+function generateInventoryWindow()
+{
+    for(let itemIndex in player.inventory)
+    {
+        addItem(player.inventory[itemIndex]);
+    }
+
 }
 
 function playAnimation(anim, target)
@@ -110,7 +149,8 @@ function btnInitializeMap() // Map loading test. This will run when the player c
 function btnLook() //
 {
     if(isLogicPaused) return;
-    displayText('You look around.')
+    displayText('You found a sword.')
+    addItem(ITEM_SWORD);
 
     // Read map description from a JSON
 
