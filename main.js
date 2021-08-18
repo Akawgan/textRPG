@@ -11,7 +11,7 @@ const player =
     health: 100,
     maxHealth: 100,
     currentMap: 1,
-    inventory: [ITEM_SWORD, ITEM_KEY0001, ITEM_KEY0001, ITEM_SWORD]
+    inventory: []
 };
 
 const currentLocation =
@@ -36,21 +36,47 @@ window.onload = function(e){
 // ADD ITEM
 function addItem(ID)
 {
-    player.inventory.push(ID); // Add item ID to player inventory
 
     let inventoryWindow = document.getElementById("inventoryWindow");
 
-    let node = document.createElement("P");
-    node.classList.add("itemTile")
-    node.classList.add("nonSelectable")
+    if(player.inventory.includes(ID)) // If player already has item of this ID, alter the existing element
+    {
+        let amountOwned = 0;
+        for(itemIndex in player.inventory)
+        {
+            if(player.inventory[itemIndex] == ID)
+            {
+                amountOwned++;
+            }
+        }
 
-    // Check which item we're adding, and add the correct label text
-    if (ID == ITEM_SWORD) node.innerHTML = "⚔️ Sword";
-    else if (ID == ITEM_KEY0001) node.innerHTML = "🔑 A key";
+        let itemElement = document.getElementById(ID);
 
-    inventoryWindow.appendChild(node);
+        if (ID == ITEM_SWORD) itemElement.innerHTML = "⚔️ Sword x" + amountOwned;
+        else if (ID == ITEM_KEY0001) itemElement.innerHTML = "🔑 Wooden key x" + amountOwned;
+
+        console.log("Already has" + ID);
+    }
+    else // Create a new item <p> element
+    {
+        let node = document.createElement("P");
+        node.classList.add("itemTile")
+        node.classList.add("nonSelectable")
+        node.id = ID;
+
+        if (ID == ITEM_SWORD) node.innerHTML = "⚔️ Sword";
+        else if (ID == ITEM_KEY0001) node.innerHTML = "🔑 Wooden key";
+        else node.innerHTML = "Unknown item";
+
+        inventoryWindow.appendChild(node);
+
+        console.log("Adding" + ID);
+    }
+
+    
     node = null;
 
+    player.inventory.push(ID); // Add item ID to player inventory
 }
 
 // GENERATE ITEM WINDOW
@@ -149,8 +175,9 @@ function btnInitializeMap() // Map loading test. This will run when the player c
 function btnLook() //
 {
     if(isLogicPaused) return;
-    displayText('You found a sword.')
+    displayText('You find a sword and a key.')
     addItem(ITEM_SWORD);
+    addItem(ITEM_KEY0001);
 
     // Read map description from a JSON
 

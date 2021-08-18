@@ -54,10 +54,14 @@ main
 main p:last-child 
 {
     color: #202020;
+    margin: 0;
+    margin-bottom: .7em;
 }
 main p:not(:last-child)
 {
     color: #adadad;
+    margin: 0;
+    margin-bottom: .7em;
 }
 
 /*.container > div > div:last-child*/
