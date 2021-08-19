@@ -7,7 +7,7 @@ Live page: https://akawgan.github.io/textRPG/
 **Practice focus:** Basics of HTML5 / CSS3 / JavaScript / RWD
 
 ## Roadmap
-> Interface
+> Interface [done]
 
 > Main story window functionality [done]
 
