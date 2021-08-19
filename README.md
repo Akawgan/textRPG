@@ -7,14 +7,16 @@ Live page: https://akawgan.github.io/textRPG/
 **Practice focus:** Basics of HTML5 / CSS3 / JavaScript / RWD
 
 ## Roadmap
-> Interface <- We are here
+> Interface
 
-> Main story window functionality
+> Main story window functionality [done]
 
-> Action buttons functionality
+> Action buttons functionality [done]
 
-> Inventory functionality
+> Inventory functionality [done]
 
-> Store the game data in JSON
+> Store the game data in JSON [done] 
+
+> Finish the basic engine <- We are here
 
 > Load / Save game state?
