@@ -20,12 +20,12 @@ const currentLocation =
     interactables: []
 };
 
-function scrollStoryArea()
+function scrollStoryArea(elementHeight)
 {
     var mainStoryArea = document.getElementById("mainArea");
 
     
-    mainStoryArea.scrollTop = mainStoryArea.scrollHeight;
+    mainStoryArea.scrollTop = mainStoryArea.scrollHeight - elementHeight - 40;
 }
 
 // INITIALIZE THE GAME
@@ -41,7 +41,7 @@ function addItem(ID)
 
     if(player.inventory.includes(ID)) // If player already has item of this ID, alter the existing element
     {
-        let amountOwned = 0;
+        let amountOwned = 1;
         for(itemIndex in player.inventory)
         {
             if(player.inventory[itemIndex] == ID)
@@ -114,7 +114,10 @@ function displayText(string) // DISPLAYS A NEW TEXT ENTRY IN THE MAIN STORY WIND
     node.innerHTML = string;
     mainStoryArea.appendChild(node);
 
-    scrollStoryArea();
+    console.log("New node height: " + mainStoryArea.lastChild.clientHeight);
+
+    scrollStoryArea(mainStoryArea.lastChild.clientHeight);
+    
 }
 
 function loadJSON(filename, callback) {   // COPYPASTE STUFF, TRY IF IT WORKS THEN DISSECT.
@@ -144,7 +147,7 @@ function initializeMap(loadedObject)
         interactables += node;
     }
 
-    displayText(currentMap.description + "<br><br>Interactables: " + interactables + "<hr>" + "<br><br>" + "You're on map number <span style='color:red'>" + currentMap.mapID + "</span>");
+    displayText("<hr>" + currentMap.description + "<br><br>Interactables: " + interactables + "" + "<br><br>" + "You're on map number <span style='color:red'>" + currentMap.mapID + "</span>");
 
     
     
@@ -184,7 +187,7 @@ function btnLook() //
     navigator.vibrate(200);
     playAnimation("anim-look");
 
-    scrollStoryArea();
+    
 }
 function btnAttack() // Test Button
 {
@@ -194,7 +197,7 @@ function btnAttack() // Test Button
     navigator.vibrate(200);
     playAnimation("anim-attack");
 
-    scrollStoryArea();
+    
 }
 function btnRun() // Test Button
 {
@@ -205,7 +208,7 @@ function btnRun() // Test Button
     navigator.vibrate(200);
     playAnimation("anim-run");
 
-    scrollStoryArea();
+    
 }
 function btnChest() // Test Button
 {
@@ -216,6 +219,6 @@ function btnChest() // Test Button
     navigator.vibrate(200);
     playAnimation("anim-chest");
 
-    scrollStoryArea();
+    
 }
 
