@@ -2,5 +2,5 @@
     "mapID": "1",
     "description": "You find yourself in a beautifully decorated bedchamber. You are lying on a <span style='color:red'>bed</span> which looks like it once belonged to a very rich and mighty person. Next to you is a small table with a <span style='color:red'>book</span>. Next to the book there is a small <span style='color:red'>glass</span> that contains some yellow liquid in it.  On the other side of the room there is a <span style='color:red'>fireplace</span>. There is no window in the room, but a small wooden <span style='color:red'>door</span>, which hopefully leads out of this place.",
 
-    "contents": ["Bed", "Book", "Glass", "Fireplace", "Door"]
+    "contents": ["Sword", "Key", "Glass", "Potato", "Rawhide"]
 }

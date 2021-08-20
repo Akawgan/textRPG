@@ -139,6 +139,19 @@ function initializeMap(loadedObject)
     currentMap = loadedObject;
     let interactables = "";
 
+    displayText("<hr>" + currentMap.description + "<br>" + "<br><br>" + "You're on map number <span style='color:red'>" + currentMap.mapID + "</span>");
+
+    
+    
+
+    console.log(currentMap);
+}
+
+function lookAround(loadedObject)
+{
+    currentMap = loadedObject;
+    let interactables = "";
+
     for(i=0;i<currentMap.contents.length;i++)
     {
         if(i>0) interactables += ", "
@@ -147,12 +160,7 @@ function initializeMap(loadedObject)
         interactables += node;
     }
 
-    displayText("<hr>" + currentMap.description + "<br><br>Interactables: " + interactables + "" + "<br><br>" + "You're on map number <span style='color:red'>" + currentMap.mapID + "</span>");
-
-    
-    
-
-    console.log(currentMap);
+    displayText("Items in the room: " + interactables);
 }
 
 // ====================================================================================================
@@ -178,7 +186,14 @@ function btnInitializeMap() // Map loading test. This will run when the player c
 function btnLook() //
 {
     if(isLogicPaused) return;
-    displayText('You find a sword and a key.')
+    
+    var targetMapID = 1;
+    var file = "map" + targetMapID;
+    loadJSON(file, function(response) {
+          var loadedObject = JSON.parse(response); // Parse JSON string into object
+          lookAround(loadedObject); // Look for items around the map
+    });
+
     addItem(ITEM_SWORD);
     addItem(ITEM_KEY0001);
 
