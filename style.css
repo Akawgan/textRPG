@@ -83,13 +83,25 @@ input[type=button], input[type=submit], input[type=reset]
         height: 3rem;
         margin-top: 3px;
         margin-bottom: 3px;
-        border-radius: 0;
         background-color: #c7d8a8;
         -webkit-appearance: none;
-        border-width: 1px;
         border-radius: 10px;
         border: 1px solid #384927;
         box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.404);
+}
+input[type=button]:disabled, input[type=submit]:disabled, input[type=reset]:disabled
+{
+        font-family: '8bit', Times, serif;
+        font-size: larger;
+        width: 100%;
+        height: 3rem;
+        margin-top: 3px;
+        margin-bottom: 3px;
+        background-color: #f3f3f3;
+        -webkit-appearance: none;
+        border-radius: 10px;
+        border: 0px solid #384927;
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
 }
 
 input[type=button]:active

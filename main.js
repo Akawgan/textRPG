@@ -79,6 +79,24 @@ function addItem(ID)
     player.inventory.push(ID); // Add item ID to player inventory
 }
 
+function disableButtons()
+{
+    var arrInput = document.getElementsByTagName("input");
+    for(i in arrInput)
+    {
+        arrInput[i].disabled = true;
+    }
+}
+
+function enableButtons()
+{
+    var arrInput = document.getElementsByTagName("input");
+    for(i in arrInput)
+    {
+        arrInput[i].disabled = false;
+    }
+}
+
 // GENERATE ITEM WINDOW
 function generateInventoryWindow()
 {
@@ -103,7 +121,7 @@ function playAnimation(anim, target)
 
     // Pause logic for 1s, after that unpause logic and finish current animation
     isLogicPaused = true;
-    setTimeout(() => {  element.classList.remove(anim); isLogicPaused = false; }, 990);
+    setTimeout(() => {  element.classList.remove(anim); isLogicPaused = false; enableButtons() }, 990);
 }
 
 function displayText(string) // DISPLAYS A NEW TEXT ENTRY IN THE MAIN STORY WINDOW
@@ -125,7 +143,7 @@ function loadJSON(filename, callback) {   // COPYPASTE STUFF, TRY IF IT WORKS TH
     var file = filename + ".json";
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
-    xobj.open('GET', "map1.json", true);
+    xobj.open('GET', file, true);
     xobj.onreadystatechange = function () {
           if (xobj.readyState == 4 && xobj.status == "200") {
             callback(xobj.responseText);
@@ -182,6 +200,8 @@ function btnInitializeMap() // Map loading test. This will run when the player c
           var loadedObject = JSON.parse(response); // Parse JSON string into object
           initializeMap(loadedObject); // Initialize the map object using the newly loaded data
     });
+
+    disableButtons();
 }
 function btnLook() //
 {
@@ -202,7 +222,7 @@ function btnLook() //
     navigator.vibrate(200);
     playAnimation("anim-look");
 
-    
+    disableButtons();
 }
 function btnAttack() // Test Button
 {
@@ -212,7 +232,7 @@ function btnAttack() // Test Button
     navigator.vibrate(200);
     playAnimation("anim-attack");
 
-    
+    disableButtons();
 }
 function btnRun() // Test Button
 {
