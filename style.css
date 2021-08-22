@@ -104,12 +104,6 @@ input[type=button]:disabled, input[type=submit]:disabled, input[type=reset]:disa
         box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
 }
 
-input[type=button]:active
-{
-    transform: scale(0.96);
-    background-color: #afd468;
-}
-
 .nonSelectable /*Disables annoying missclicks that make you select text instead of clicking a control*/
 {
   -webkit-user-select: none;
