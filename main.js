@@ -194,7 +194,7 @@ function btnInitializeMap() // Map loading test. This will run when the player c
     navigator.vibrate(200);
     playAnimation("anim-run");
 
-    var targetMapID = 1;
+    var targetMapID = player.currentMap;
     var file = "map" + targetMapID;
     loadJSON(file, function(response) {
           var loadedObject = JSON.parse(response); // Parse JSON string into object
@@ -243,7 +243,8 @@ function btnRun() // Test Button
     navigator.vibrate(200);
     playAnimation("anim-run");
 
-    
+    // Wrap it up [along with any background / sprite change codes when changing maps]
+    player.currentMap = 2;
 }
 function btnChest() // Test Button
 {

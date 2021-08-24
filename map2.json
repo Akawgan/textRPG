@@ -1,0 +1,6 @@
+{
+    "mapID": "2",
+    "description": "Second map",
+
+    "contents": ["Sword", "Key", "Glass", "Potato", "Rawhide"]
+}
