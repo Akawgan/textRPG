@@ -244,7 +244,10 @@ function btnRun() // Test Button
     playAnimation("anim-run");
 
     // Wrap it up [along with any background / sprite change codes when changing maps]
-    player.currentMap = 2;
+    if(player.currentMap == 1)
+        player.currentMap = 2;
+    else
+        player.currentMap = 1;
 }
 function btnChest() // Test Button
 {
