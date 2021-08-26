@@ -79,6 +79,14 @@ function addItem(ID)
     player.inventory.push(ID); // Add item ID to player inventory
 }
 
+function generateCmdMenu()
+{
+    var cmdMenu = document.getElementById("actionsWindow");
+    cmdMenu.textContent = ""; // Remove the buttons currently in the menu
+
+    //TODO: Generate a new list of buttons [based on the supplied args]
+}
+
 function disableButtons()
 {
     var arrInput = document.getElementsByTagName("input");
@@ -155,12 +163,7 @@ function loadJSON(filename, callback) {   // COPYPASTE STUFF, TRY IF IT WORKS TH
 function initializeMap(loadedObject)
 {
     currentMap = loadedObject;
-    let interactables = "";
-
     displayText("<hr>" + currentMap.description + "<br>" + "<br><br>" + "You're on map number <span style='color:red'>" + currentMap.mapID + "</span>");
-
-    
-    
 
     console.log(currentMap);
 }
@@ -207,7 +210,7 @@ function btnLook() //
 {
     if(isLogicPaused) return;
     
-    var targetMapID = 1;
+    var targetMapID = player.currentMap;
     var file = "map" + targetMapID;
     loadJSON(file, function(response) {
           var loadedObject = JSON.parse(response); // Parse JSON string into object
@@ -253,11 +256,11 @@ function btnChest() // Test Button
 {
     if(isLogicPaused) return;
 
-    displayText("You open the chest.")
+    displayText("You open the chest. It pulls you in and now you can't do anything.")
 
     navigator.vibrate(200);
     playAnimation("anim-chest");
 
-    
+    generateCmdMenu();
 }
 
