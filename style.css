@@ -281,7 +281,6 @@ input[type=button]:disabled, input[type=submit]:disabled, input[type=reset]:disa
     }
 }
 
-
 /* Media queries - mobile */
 @media only screen and (hover: none) and (pointer: coarse)
 {
