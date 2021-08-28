@@ -186,35 +186,10 @@ function lookAround(loadedObject)
 
 function fadeOut()
 {
-    var element = document.getElementById("inventoryWindow");
+    var slideSource = document.getElementById('inventoryWindow');
+    var label = document.getElementById('inventoryLabel');
 
-    var op = 1;  // initial opacity
-    var timer = setInterval(function () {
-        if (op <= 0.1){
-            op = 0;
-            clearInterval(timer);
-            //element.style.display = 'none';
-        }
-        element.style.opacity = op;
-        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
-        op -= op * 0.4;
-    }, 50);
-}
-
-function fadeIn()
-{
-    var element = document.getElementById("inventoryWindow");
-
-    var op = 0.1;  // initial opacity
-    //element.style.display = 'block';
-    var timer = setInterval(function () {
-        if (op >= 1){
-            clearInterval(timer);
-        }
-        element.style.opacity = op;
-        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
-        op += op * 0.1;
-    }, 10);
+    slideSource.classList.toggle('fade');
 }
 
 // ====================================================================================================
@@ -296,28 +271,10 @@ function btnChest() // Test Button
 
     generateCmdMenu();
 }
-function inventoryFadeOut() // Test Button
+function inventoryFade() // Test Button
 {
     if(isLogicPaused) return;
-
-    displayText("You close the inventory window.")
-
     navigator.vibrate(200);
-    playAnimation("anim-chest");
-
     fadeOut();
-    disableButtons();
-}
-function inventoryFadeIn() // Test Button
-{
-    if(isLogicPaused) return;
-
-    displayText("You open the inventory window.")
-
-    navigator.vibrate(200);
-    playAnimation("anim-chest");
-
-    fadeIn();
-    disableButtons();
 }
 

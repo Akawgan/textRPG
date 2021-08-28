@@ -39,20 +39,17 @@
 
                 <!--Inventory-->
                 <div id="inventoryWindow" class="inventoryWindow">
-                    <label class="menuLabel nonSelectable">Inventory</label>
+                    <label id="inventoryLabel" class=" nonSelectable">ITEM BAG</label><hr>
                 </div>
 
                 <div id="actionsWindow" class="actionsWindow">
-                    <label class="menuLabel nonSelectable">Action Menu</label>
+                    <label class="menuLabel nonSelectable">ACTION MENU</label>
                     <input type="button" value="[DBG] Load Room" onclick="btnInitializeMap()">
                     <input type="button" value="Look Around" onclick="btnLook()">
                     <input type="button" value="Attack ➩" onclick="btnAttack()">
                     <input type="button" value="Change Map" onclick="btnRun()">
                     <input type="button" value="Open Chest" onclick="btnChest()">
-                    
-
-                    <input type="button" value="Close Inventory" onclick="inventoryFadeOut()">
-                    <input type="button" value="Open Inventory" onclick="inventoryFadeIn()">
+                    <input type="button" value="Toggle Inventory" onclick="inventoryFade()">
                     <input type="button" value="Scrolling Test">
                     <input type="button" value="Scrolling Test">
                     <input type="button" value="Scrolling Test">

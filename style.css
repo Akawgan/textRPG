@@ -134,6 +134,8 @@ input[type=button]:disabled, input[type=submit]:disabled, input[type=reset]:disa
 .inventoryWindow
 {
     /*visibility: hidden;*/
+    opacity: 1;
+    transition: opacity .2s, transform .2s;
     flex-grow: 1;
     border-radius: 5px;
     height: 90%;
@@ -143,12 +145,16 @@ input[type=button]:disabled, input[type=submit]:disabled, input[type=reset]:disa
     padding: 0.3rem 0.3rem 0.3rem 0.3rem;
     background-color: #f3f3f3;
     border: 1px solid #f3f3f3;
-    
+
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 }
 .inventoryWindow::-webkit-scrollbar {
     display: none;
+}
+.inventoryWindow.fade {
+    opacity: 0;
+    transform: translate3d(-50px, 0, 0);
 }
 
 .actionsWindow
@@ -169,7 +175,13 @@ input[type=button]:disabled, input[type=submit]:disabled, input[type=reset]:disa
     display: none;
 }
 
-
+#inventoryLabel
+{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 3px;
+}
 
 .menuLabel
 {
