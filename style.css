@@ -131,9 +131,20 @@ input[type=button]:disabled, input[type=submit]:disabled, input[type=reset]:disa
     width: 25rem;
     margin: 0.5rem;
 }
+.statWindow
+{
+    position: absolute;
+    transform: translate3d(.2rem, 2rem, 0);
+    flex-grow: 1;
+    border-radius: 5px;
+    height: 90%;
+    width: 40vw;
+    z-index: 1;
+    max-width: 28rem;
+}
+
 .inventoryWindow
 {
-    /*visibility: hidden;*/
     opacity: 1;
     transition: opacity .2s, transform .2s;
     flex-grow: 1;
@@ -143,8 +154,9 @@ input[type=button]:disabled, input[type=submit]:disabled, input[type=reset]:disa
     margin: 1rem 0.2rem 0 0.2rem;
     overflow: auto;
     padding: 0.3rem 0.3rem 0.3rem 0.3rem;
-    background-color: #f3f3f3;
+    background-color: #ffffff;
     border: 1px solid #f3f3f3;
+    z-index: 2;
 
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
@@ -337,6 +349,7 @@ input[type=button]:disabled, input[type=submit]:disabled, input[type=reset]:disa
     {
         transform: translateY(0.2em)
     }
+
 }
 
 @media only screen and (hover: none) and (pointer: coarse) and (orientation: landscape)
