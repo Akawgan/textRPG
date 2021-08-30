@@ -8,8 +8,8 @@ const ITEM_KEY0001 = 2;
 const player =
 {
     name: "DummyName",
-    health: 100,
-    maxHealth: 100,
+    health: 120,
+    maxHealth: 150,
     currentMap: 1,
     inventory: []
 };
@@ -31,6 +31,13 @@ function scrollStoryArea(elementHeight)
 // INITIALIZE THE GAME
 window.onload = function(e){ 
     generateInventoryWindow();
+}
+
+function updatePlayerHealth()
+{
+    let el = document.getElementById("playerHealth");
+
+    el.innerHTML = "Health: " + player.health + "/" + player.maxHealth;
 }
 
 // ADD ITEM
@@ -244,6 +251,7 @@ function btnAttack() // Test Button
     playAnimation("anim-attack");
 
     disableButtons();
+    updatePlayerHealth();
 }
 function btnRun() // Test Button
 {
