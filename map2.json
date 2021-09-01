@@ -1,6 +1,6 @@
 {
     "mapID": "2",
-    "description": "Second map",
+    "description": "You are in the second room. You see a <span style='color:red'>door</span> that leads back into the first room.",
 
     "contents": ["Broken Bottle", "A shoe"]
 }
